@@ -15,7 +15,7 @@ function PersonajesTable({personajes, onEdit, onDelete}){
             </thead>
             <tbody>
                 {personajes.map((personaje) =>(
-                    <PersonajeRow key = {personaje.id} personaje={personaje} onEdit = {onEdit} onDelete = {onDelete}/>
+                    <PersonajeRow key ={personaje.id} personaje= {personaje} onEdit = {onEdit} onDelete = {onDelete}/>
                 ))}
             </tbody>
         </table>

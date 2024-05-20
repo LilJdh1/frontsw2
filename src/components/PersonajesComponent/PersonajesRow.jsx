@@ -7,10 +7,10 @@ const PersonajesRow = ({personaje, onEdit, onDelete}) => {
     };
     return (
         <tr>//table row
-            <td>{personaje.nombre}</td>
+            <td>{personaje.name}</td>
             <td>{personaje.age}</td>
             <td>{personaje.gender}</td>
-            <td>{personaje.heigth}</td>
+            <td>{personaje.height}</td>
             <td>{personaje.origin}</td>
             <td>{personaje.power}</td>
             <td>{personaje.classification}</td>

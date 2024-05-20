@@ -17,7 +17,7 @@ function App() {
  //Crear o actualizar un personaje
  const handleCreateOrUpdatePersonajes = async (PersonajeData) => {
   if (editingPersonaje) {
-    await axios.put(`http://localhost:8080/api/personajes${editingPersonaje.id}`, PersonajeData);
+    await axios.put(`http://localhost:8080/api/personajes/${editingPersonaje.id}`, PersonajeData);
   } else {
     await axios.post(`http://localhost:8080/api/personajes`, PersonajeData);
   }
@@ -41,9 +41,14 @@ function App() {
   };
  
   //Eliminar un personaje con el ID
-  const handleDeletePersonaje = async(personajeId)=>{
-  await axios.delete(`http://localhost:8080/api/personajes/${personajeId}`)
-  fetchPersonajes()
+  const handleDeletePersonaje = async(id)=>{
+    try{
+      await axios.delete(`http://localhost:8080/api/personajes/${id}`)
+      fetchPersonajes()
+    } catch (error) {
+      console.error(error)
+      alert("Ocurrio un error al eliminar el personaje")
+    }
   };
 
   return (
