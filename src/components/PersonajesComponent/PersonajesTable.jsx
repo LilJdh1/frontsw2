@@ -20,5 +20,5 @@ function PersonajesTable({personajes, onEdit, onDelete}){
             </tbody>
         </table>
     );
-};
+}
 export default PersonajesTable;
